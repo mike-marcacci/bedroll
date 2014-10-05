@@ -1,0 +1,67 @@
+[
+	{
+		"id": 1,
+		"name": "hydrogen",
+		"symbol": "H",
+		"atomic": {
+			"number": 1,
+			"weight": 1.008,
+			"electrons": "1s1"
+		},
+		"physical": {
+			"phase": "gas"
+		}
+	},
+	{
+		"id": 2,
+		"name": "helium",
+		"symbol": "He",
+		"atomic": {
+			"number": 2,
+			"weight": 4.002602,
+			"electrons": "1s2"
+		},
+		"physical": {
+			"phase": "gas"
+		}
+	},
+	{
+		"id": 3,
+		"name": "lithium",
+		"symbol": "Li",
+		"atomic": {
+			"number": 3,
+			"weight": 6.94,
+			"electrons": "1s2 2s1"
+		},
+		"physical": {
+			"phase": "solid"
+		}
+	},
+	{
+		"id": 4,
+		"name": "beryllium",
+		"symbol": "Be",
+		"atomic": {
+			"number": 4,
+			"weight": 9.0121831,
+			"electrons": "1s2 2s2"
+		},
+		"physical": {
+			"phase": "solid"
+		}
+	},
+	{
+		"id": 5,
+		"name": "boron",
+		"symbol": "B",
+		"atomic": {
+			"number": 5,
+			"weight": 10.81,
+			"electrons": "1s2 2s2 2p1"
+		},
+		"physical": {
+			"phase": "solid"
+		}
+	}
+]

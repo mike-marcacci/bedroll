@@ -1,0 +1,20 @@
+{
+  "name": "bedroll",
+  "version": "0.0.0",
+  "description": "A collection of tools for building RESTful interfaces backed by rethinkdb.",
+  "main": "index.js",
+  "directories": {
+  },
+  "dependencies": {
+    "rethinkdb": "^1.15.0-0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.4"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
