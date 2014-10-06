@@ -1,13 +1,13 @@
 {
   "name": "bedroll",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of tools for building RESTful interfaces backed by rethinkdb.",
   "main": "index.js",
   "directories": {},
   "homepage": "https://github.com/mike-marcacci/bedroll",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/mike-marcacci/bedroll.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mike-marcacci/bedroll.git"
   },
   "bugs": {
     "url": "https://github.com/mike-marcacci/bedroll/issues"
