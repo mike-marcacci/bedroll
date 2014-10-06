@@ -5,25 +5,30 @@ var bedroll = require('./index.js')({});
 var conn;
 
 function query(filter, callback){
-	r.db('test').table('test').filter(bedroll.filter(filter)).run(conn, function(err, cursor){
+	r.db('bedroll_test').table('test').filter(bedroll.filter(filter)).run(conn, function(err, cursor){
 		if(err) return callback(err);
 		cursor.toArray(callback);
 	});
 }
 
+// set up the db
 before(function(done){
-	// connect to the db
-	r.connect({db: 'test'}, function(err, connection) {
+	r.connect({}, function(err, connection) {
 		if(err) return done(err);
 		conn = connection;
 
-		// TODO: create the fixtures database
+		// create the fixtures database
+		r.dbCreate('bedroll_test').run(conn, function(err){
+			if(err) return done(err);
+	
+			// create the fixtures table
+			r.db('bedroll_test').tableCreate('test').run(conn, function(err){
+				if(err) return done(err);
 
-		// TODO: create the fixtures table
-
-		// TODO: insert the fixtures
-
-		done();
+				// insert the fixture data
+				r.db('bedroll_test').table('test').insert(require('./fixtures.json')).run(conn, done);
+			});
+		});
 	});
 });
 
@@ -54,6 +59,14 @@ describe('Operators', function(done){
 });
 
 describe('Traversing', function(done){
+	it('should accept an empty filter', function(done){
+		query({}, function(err, result){
+			if(err) return done(err);
+			assert.lengthOf(result, 5);
+			done();
+		});
+	});
+
 	it('should support queries on deep properties', function(done){
 		query({atomic: {weight: {lt: '8'}}}, function(err, result){
 			if(err) return done(err);
@@ -73,10 +86,9 @@ describe('Traversing', function(done){
 
 
 
-
+// drop the fixtures database
 after(function(done){
-
-	// TODO: drop the fixtures database
-
-	conn.close(done);
+	r.dbDrop('bedroll_test').run(conn, function(err){
+		conn.close(done);
+	});
 })
