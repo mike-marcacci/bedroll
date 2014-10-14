@@ -1,5 +1,7 @@
 bedroll
 =======
+[![Build Status](https://travis-ci.org/mike-marcacci/bedroll.svg)](https://travis-ci.org/mike-marcacci/bedroll)
+
 
 A collection of tools for building RESTful interfaces backed by rethinkdb.
 
