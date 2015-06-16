@@ -1,6 +1,6 @@
 {
   "name": "bedroll",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of tools for building RESTful interfaces backed by rethinkdb.",
   "main": "index.js",
   "directories": {},
