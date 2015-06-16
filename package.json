@@ -13,7 +13,7 @@
     "url": "https://github.com/mike-marcacci/bedroll/issues"
   },
   "dependencies": {
-    "rethinkdb": "^1.15.0-0"
+    "rethinkdb": "^2.0.0-2"
   },
   "devDependencies": {
     "chai": "^1.9.2",
